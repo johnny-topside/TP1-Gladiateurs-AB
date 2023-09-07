@@ -11,6 +11,7 @@ public class Personnage {
     int valeurMaxAttaque;
     int valeurDefense;
     int initiative;
+
     // </editor-fold>
     // **************************************************************************
     // **************************************************************************
@@ -32,7 +33,7 @@ public class Personnage {
         this.initiative = 0;
     }
     // </editor-fold>
-    
+
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
@@ -76,24 +77,22 @@ public class Personnage {
     public void setInitiative(int initiative) {
         this.initiative = initiative;
     }
-    
-    // </editor-fold>
 
+    // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
-    public void afficherInfosPersonnage(Personnage x) {
+    public void afficherInfosPersonnage() {
         System.out.println();
-        System.out.println(x.getNom());
-        System.out.println("\tAttaque : " + x.getValeurMaxAttaque());
-        System.out.println("\tDefense : " + x.getValeurDefense());
-        System.out.println("\tPoints de vie : " + x.getPointsDeVie());
-        System.out.println("\tInitiative : " + x.getInitiative());
+        System.out.println(this.nom);
+        System.out.println("\tAttaque : " + this.valeurMaxAttaque);
+        System.out.println("\tDefense : " + this.valeurDefense);
+        System.out.println("\tPoints de vie : " + this.pointsDeVie);
+        System.out.println("\tInitiative : " + this.initiative);
         if (x.getPointsDeVie() <= 0) {
             System.out.println("\tStatut : Mort");
-        }
-        else {
+        } else {
             System.out.println("\tStatut : Vivant");
         }
     }
@@ -102,7 +101,7 @@ public class Personnage {
         int attaque;
         int min = 0;
         int max = this.valeurMaxAttaque;
-        attaque = (int)Math.floor(Math.random()* (max - min + 1) + min);
+        attaque = (int) Math.floor(Math.random() * (max - min + 1) + min);
         return attaque;
     }
 
@@ -115,23 +114,26 @@ public class Personnage {
         }
         if (personnageCible.pointsDeVie - dommages < 0) {
             personnageCible.pointsDeVie = 0;
-        }
-        else {
+        } else {
             personnageCible.pointsDeVie -= dommages;
         }
-        
+
         System.out.println("");
         System.out.println(this.nom + " attaque avec une puissance de " + forceDeFrappe);
         System.out.println(personnageCible.nom + " a une defense de " + personnageCible.valeurDefense);
         System.out.println("Les dommages sont donc de " + dommages);
-        
+
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
         //modifier les points de vie du personnage cible, afficher les détails
         // sur l'attaque, tel que montré dans l'énoncé.
     }
 
     public void setNewInitiativeRandom() {
-        // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+        int newIni;
+        int min = 0;
+        int max = 100;
+        newIni = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        this.initiative = newIni;
     }
     // </editor-fold>
 }
