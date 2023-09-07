@@ -90,7 +90,7 @@ public class Personnage {
         System.out.println("\tDefense : " + this.valeurDefense);
         System.out.println("\tPoints de vie : " + this.pointsDeVie);
         System.out.println("\tInitiative : " + this.initiative);
-        if (x.getPointsDeVie() <= 0) {
+        if (this.getPointsDeVie() <= 0) {
             System.out.println("\tStatut : Mort");
         } else {
             System.out.println("\tStatut : Vivant");
