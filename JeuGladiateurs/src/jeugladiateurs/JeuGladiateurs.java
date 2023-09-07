@@ -24,15 +24,11 @@ public class JeuGladiateurs {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
-    Bob.afficherInfosPersonnage(Bob);
-    Igor.afficherInfosPersonnage(Igor);
+    Bob.afficherInfosPersonnage();
+    Igor.afficherInfosPersonnage();
     affichage.afficherDebutCombat();
     // </editor-fold>
     
-    
-    Bob.afficherInfosPersonnage();
-    Bob.setNewInitiativeRandom();
-
     
     
     // **************************************************************************
