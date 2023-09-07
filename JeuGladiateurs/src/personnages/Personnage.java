@@ -99,9 +99,11 @@ public class Personnage {
     }
 
     private int attaqueCalcul() {
-        // TODO : Retourner la valeur de l'attaque du personnage.
-        // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
-        return 0;
+        int attaque;
+        int min = 0;
+        int max = this.valeurMaxAttaque;
+        attaque = (int)Math.floor(Math.random()* (max - min + 1) + min);
+        return attaque;
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
