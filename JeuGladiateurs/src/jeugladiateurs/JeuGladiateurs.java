@@ -3,6 +3,8 @@ package jeugladiateurs;
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
+import java.util.HashSet;
+import java.util.Set;
 
 public class JeuGladiateurs {
 
@@ -26,6 +28,12 @@ public class JeuGladiateurs {
     Igor.afficherInfosPersonnage(Igor);
     affichage.afficherDebutCombat();
     // </editor-fold>
+    
+    
+    Bob.afficherInfosPersonnage();
+    Bob.setNewInitiativeRandom();
+
+    
     
     // **************************************************************************
     // **************************************************************************
