@@ -33,9 +33,13 @@ public class Personnage {
         this.initiative = 0;
     }
     // </editor-fold>
-    public String getNom() {    
+    
+    // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
+    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
+    public String getNom() {
         return nom;
-        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
     }
 
     public void setNom(String nom) {
@@ -70,15 +74,12 @@ public class Personnage {
         return initiative;
     }
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
     public void setInitiative(int initiative) {
         this.initiative = initiative;
     }
-
+    
     // </editor-fold>
+
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
