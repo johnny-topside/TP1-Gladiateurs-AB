@@ -126,8 +126,10 @@ public class Personnage {
         System.out.println("Les dommages sont donc de " + dommages);
     }
 
-    public void setNewInitiativeRandom(int min, int max) {
+    public void setNewInitiativeRandom() {
         int rand;
+        int min = 0;
+        int max = 100;
         rand = (int) Math.floor(Math.random() * (max - min + 1) + min);
         this.initiative = rand;
     }
