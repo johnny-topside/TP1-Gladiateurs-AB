@@ -10,6 +10,16 @@ package personnages;
  */
 public class Retiaire extends Personnage {
 
+    boolean hasNet = true;
+
+    public boolean hasNet() {
+        return hasNet;
+    }
+
+    public void setHasNet(boolean hasNet) {
+        this.hasNet = hasNet;
+    }
+
     public Retiaire(String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
     }
@@ -25,39 +35,32 @@ public class Retiaire extends Personnage {
     }
 
     @Override
-    public void setNewInitiativeRandom() {
-        int newIni;
-        int min = 0;
-        int max = 100;
-        newIni = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        this.initiative = newIni;
-    }
-
-    private int attaqueCalcul() {
-        int attaque;
-        int min = 0;
-        int max = this.valeurMaxAttaque;
-        attaque = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        return attaque;
-    }
-
-    @Override
     public void frapperPersonnage(Personnage personnageCible) {
-        int forceDeFrappe = this.attaqueCalcul();
-        int valeurDefense = personnageCible.valeurDefense;
-        int dommages = forceDeFrappe - valeurDefense;
-        if (dommages < 0) {
-            dommages = 0;
-        }
-        if (personnageCible.pointsDeVie - dommages < 0) {
-            personnageCible.pointsDeVie = 0;
-        } else {
-            personnageCible.pointsDeVie -= dommages;
-        }
+        retiaireGambit(personnageCible);
+    }
 
-        System.out.println("");
-        System.out.println(this.nom + " attaque avec une puissance de " + forceDeFrappe);
-        System.out.println(personnageCible.nom + " a une defense de " + personnageCible.valeurDefense);
-        System.out.println("Les dommages sont donc de " + dommages);
+    public void retiaireGambit(Personnage personnageCible) {
+        int rand;
+        
+        if (hasNet()) {
+            this.hasNet = false;
+            System.out.println("");
+            System.out.println(this.nom + " lance son filet.");
+
+            rand = (int) Math.floor(Math.random() * (11));
+            if (rand == 0) {
+                System.out.println("");
+                System.out.println("Son filet attrape " + personnageCible.nom + " et il l’empale sauvagement avec sa lance!");
+                personnageCible.pointsDeVie = 0;
+            }
+            else {
+                System.out.println("");
+                System.out.println(personnageCible.nom + " esquive le filet!");
+            }
+
+        } else {
+            System.out.println(this.nom + " ramasse son filet et en profite pour attaquer!");
+            super.frapperPersonnage(personnageCible);
+        }
     }
 }
