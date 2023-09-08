@@ -8,6 +8,14 @@ package personnages;
  *
  * @author 202230053
  */
-public class Mirmillon {
+public class Mirmillon extends Personnage {
+
+    public Mirmillon(String nom, int attaqueMax, int defense, int pvs, int ini) {
+        super(nom, attaqueMax, defense, pvs, ini);
+    }
+
+    public Mirmillon() {
+        super();
+    }    
     
 }
