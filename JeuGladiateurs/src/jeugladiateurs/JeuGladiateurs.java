@@ -37,9 +37,9 @@ public class JeuGladiateurs {
         while (Bob.getPointsDeVie() != 0 && Igor.getPointsDeVie() != 0) {
             tour.afficheTour();
             for (int i = 0; i < 101; i++) {
-                if (Bob.getInitiative() == i) {
+                if (Bob.getInitiative() == i && Bob.getPointsDeVie() != 0) {
                     Bob.frapperPersonnage(Igor);
-                } else if (Igor.getInitiative() == i) {
+                } else if (Igor.getInitiative() == i && Igor.getPointsDeVie() != 0) {
                     Igor.frapperPersonnage(Bob);
                 }
             }
