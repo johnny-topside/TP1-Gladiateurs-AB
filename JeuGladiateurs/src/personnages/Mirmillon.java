@@ -41,9 +41,9 @@ public class Mirmillon extends Personnage {
     public void mirmillionStrike(Personnage personnageCible) {
         super.frapperPersonnage(personnageCible);
 
-        if (personnageCible.pointsDeVie == 0) {
+        if (personnageCible.getPointsDeVie() == 0) {
             System.out.println("");
-            System.out.println(personnageCible.nom + " est decapite!");
+            System.out.println(personnageCible.getNom() + " est decapite!");
         } else {
             System.out.println("");
             System.out.println(this.nom + " frappe de nouveau!");
