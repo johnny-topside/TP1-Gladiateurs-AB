@@ -58,5 +58,4 @@ public class JeuGladiateurs {
 
         // </editor-fold>
     }
-
 }
