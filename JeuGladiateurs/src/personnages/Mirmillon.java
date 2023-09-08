@@ -25,15 +25,6 @@ public class Mirmillon extends Personnage {
     }
 
     @Override
-    public void setNewInitiativeRandom() {
-        int newIni;
-        int min = 0;
-        int max = 30;
-        newIni = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        this.initiative = newIni;
-    }
-
-    @Override
     public void frapperPersonnage(Personnage personnageCible) {
         mirmillionStrike(personnageCible);
     }
