@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class JeuGladiateurs {
-    
+
     public static void main(String[] args) {
 
         // **************************************************************************
@@ -44,13 +44,13 @@ public class JeuGladiateurs {
                 }
             }
             affichage.afficherSeparateurInfosPerso();
-            
+
             Bob.afficherInfosPersonnage();
             Igor.afficherInfosPersonnage();
-            
+
             Bob.setNewInitiativeRandom(0, 30);
             Igor.setNewInitiativeRandom(0, 100);
-            
+
             tour.augmenteTour();
             affichage.afficherSeparateurDeTour();
         }
@@ -58,5 +58,5 @@ public class JeuGladiateurs {
 
         // </editor-fold>
     }
-    
+
 }
