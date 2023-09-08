@@ -23,7 +23,6 @@ public class Mirmillon extends Personnage {
     }
 
     // </editor-fold>
-
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
@@ -36,10 +35,6 @@ public class Mirmillon extends Personnage {
 
     @Override
     public void frapperPersonnage(Personnage personnageCible) {
-        mirmillionStrike(personnageCible);
-    }
-
-    public void mirmillionStrike(Personnage personnageCible) {
         super.frapperPersonnage(personnageCible);
 
         if (personnageCible.getPointsDeVie() == 0) {
