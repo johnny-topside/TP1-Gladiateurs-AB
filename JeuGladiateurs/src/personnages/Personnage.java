@@ -125,11 +125,11 @@ public class Personnage {
     }
 
     public void setNewInitiativeRandom() {
-        int newIni;
+        int rand;
         int min = 0;
         int max = 100;
-        newIni = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        this.initiative = newIni;
+        rand = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        this.initiative = rand;
     }
     // </editor-fold>
 }
