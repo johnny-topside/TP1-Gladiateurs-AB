@@ -48,8 +48,8 @@ public class JeuGladiateurs {
             Bob.afficherInfosPersonnage();
             Igor.afficherInfosPersonnage();
             
-            Bob.setNewInitiativeRandom();
-            Igor.setNewInitiativeRandom();
+            Bob.setNewInitiativeRandom(0, 30);
+            Igor.setNewInitiativeRandom(0, 100);
             
             tour.augmenteTour();
             affichage.afficherSeparateurDeTour();
