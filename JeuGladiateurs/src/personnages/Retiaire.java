@@ -50,10 +50,6 @@ public class Retiaire extends Personnage {
 
     @Override
     public void frapperPersonnage(Personnage personnageCible) {
-        retiaireGambit(personnageCible);
-    }
-
-    public void retiaireGambit(Personnage personnageCible) {
         int rand;
 
         if (hasNet()) {
@@ -78,5 +74,5 @@ public class Retiaire extends Personnage {
             super.frapperPersonnage(personnageCible);
         }
     }
-    // </editor-fold>
+// </editor-fold>
 }
