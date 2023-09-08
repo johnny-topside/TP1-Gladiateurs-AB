@@ -15,6 +15,8 @@ public class Retiaire extends Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     boolean hasNet = true;
+    
+    String nomClasse = "Rétiaire";
     // </editor-fold>
 
     // **************************************************************************
@@ -28,6 +30,16 @@ public class Retiaire extends Personnage {
     public void setHasNet(boolean hasNet) {
         this.hasNet = hasNet;
     }
+
+    public String getNomClasse() {
+        return nomClasse;
+    }
+
+    public void setNomClasse(String nomClasse) {
+        this.nomClasse = nomClasse;
+    }
+
+    
     //</editor-fold>
 
     // **************************************************************************
@@ -45,7 +57,7 @@ public class Retiaire extends Personnage {
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
-        System.out.println("\tClasse : Rétiaire");
+        System.out.println("\tClasse : " + this.nomClasse);
     }
 
     @Override
