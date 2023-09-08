@@ -10,6 +10,10 @@ package personnages;
  */
 public class Mirmillon extends Personnage {
 
+    // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
+    // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Mirmillon(String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
     }
@@ -18,6 +22,12 @@ public class Mirmillon extends Personnage {
         super();
     }
 
+    // </editor-fold>
+
+    // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
@@ -41,4 +51,5 @@ public class Mirmillon extends Personnage {
             super.frapperPersonnage(personnageCible);
         }
     }
+    // </editor-fold>
 }
