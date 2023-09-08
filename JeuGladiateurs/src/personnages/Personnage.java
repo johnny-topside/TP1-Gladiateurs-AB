@@ -131,5 +131,11 @@ public class Personnage {
         rand = (int) Math.floor(Math.random() * (max - min + 1) + min);
         this.initiative = rand;
     }
+    
+        public void setNewInitiativeRandom(int min, int max) {
+        int rand;
+        rand = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        this.initiative = rand;
+    }
     // </editor-fold>
 }
