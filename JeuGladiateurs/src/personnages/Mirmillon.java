@@ -46,7 +46,7 @@ public class Mirmillon extends Personnage {
             System.out.println(personnageCible.nom + " est decapite!");
         } else {
             System.out.println("");
-            System.out.println(this.nom + " frappe de nouveau.");
+            System.out.println(this.nom + " frappe de nouveau!");
             super.frapperPersonnage(personnageCible);
         }
     }
