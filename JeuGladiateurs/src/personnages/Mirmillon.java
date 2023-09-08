@@ -40,25 +40,9 @@ public class Mirmillon extends Personnage {
         attaque = (int) Math.floor(Math.random() * (max - min + 1) + min);
         return attaque;
     }
-
-    @Override
-    public void frapperPersonnage(Personnage personnageCible) {
-        int forceDeFrappe = this.attaqueCalcul();
-        int valeurDefense = personnageCible.valeurDefense;
-        int dommages = forceDeFrappe - valeurDefense;
-        if (dommages < 0) {
-            dommages = 0;
-        }
-        if (personnageCible.pointsDeVie - dommages < 0) {
-            personnageCible.pointsDeVie = 0;
-        } else {
-            personnageCible.pointsDeVie -= dommages;
-        }
-
-        System.out.println("");
-        System.out.println(this.nom + " attaque avec une puissance de " + forceDeFrappe);
-        System.out.println(personnageCible.nom + " a une defense de " + personnageCible.valeurDefense);
-        System.out.println("Les dommages sont donc de " + dommages);
+        
+    public void mirmillionStrike(Personnage personnageCible) {
+        super.frapperPersonnage(personnageCible);
 
         if (personnageCible.pointsDeVie == 0) {
             System.out.println("");
@@ -66,22 +50,12 @@ public class Mirmillon extends Personnage {
         } else {
             System.out.println("");
             System.out.println(this.nom + " frappe de nouveau.");
-            forceDeFrappe = this.attaqueCalcul();
-            valeurDefense = personnageCible.valeurDefense;
-            dommages = forceDeFrappe - valeurDefense;
-            if (dommages < 0) {
-                dommages = 0;
-            }
-            if (personnageCible.pointsDeVie - dommages < 0) {
-                personnageCible.pointsDeVie = 0;
-            } else {
-                personnageCible.pointsDeVie -= dommages;
-            }
-
-            System.out.println("");
-            System.out.println(this.nom + " attaque avec une puissance de " + forceDeFrappe);
-            System.out.println(personnageCible.nom + " a une defense de " + personnageCible.valeurDefense);
-            System.out.println("Les dommages sont donc de " + dommages);
+            super.frapperPersonnage(personnageCible);
         }
+    }
+    
+    @Override
+    public void frapperPersonnage(Personnage personnageCible) {
+            mirmillionStrike(personnageCible);
     }
 }
