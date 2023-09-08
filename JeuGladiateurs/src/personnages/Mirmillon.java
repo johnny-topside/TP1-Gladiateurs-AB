@@ -33,14 +33,6 @@ public class Mirmillon extends Personnage {
         this.initiative = newIni;
     }
 
-    private int attaqueCalcul() {
-        int attaque;
-        int min = 0;
-        int max = this.valeurMaxAttaque;
-        attaque = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        return attaque;
-    }
-
     @Override
     public void frapperPersonnage(Personnage personnageCible) {
         mirmillionStrike(personnageCible);
