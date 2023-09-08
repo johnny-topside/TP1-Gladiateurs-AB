@@ -1,7 +1,7 @@
 package jeugladiateurs;
 
-import personnages.Personnage;
 import personnages.Mirmillon;
+import personnages.Retiaire;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
 import java.util.HashSet;
@@ -18,7 +18,7 @@ public class JeuGladiateurs {
         CompteurDeTour tour = new CompteurDeTour();
         AffichageEcran affichage = new AffichageEcran();
         Mirmillon Bob = new Mirmillon("Bob le malchanceux", 15, 15, 70, 15);
-        Personnage Igor = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
+        Retiaire Igor = new Retiaire("Igor l'empaleur", 25, 5, 100, 30);
         // </editor-fold>
 
         // **************************************************************************
