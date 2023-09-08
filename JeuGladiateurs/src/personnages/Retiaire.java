@@ -10,8 +10,17 @@ package personnages;
  */
 public class Retiaire extends Personnage {
 
+    // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
+    // <editor-fold defaultstate="collapsed" desc="Attributs">
     boolean hasNet = true;
+    // </editor-fold>
 
+    // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
+    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
     public boolean hasNet() {
         return hasNet;
     }
@@ -19,7 +28,12 @@ public class Retiaire extends Personnage {
     public void setHasNet(boolean hasNet) {
         this.hasNet = hasNet;
     }
+    //</editor-fold>
 
+    // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public Retiaire(String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
     }
@@ -64,4 +78,5 @@ public class Retiaire extends Personnage {
             super.frapperPersonnage(personnageCible);
         }
     }
+    // </editor-fold>
 }
