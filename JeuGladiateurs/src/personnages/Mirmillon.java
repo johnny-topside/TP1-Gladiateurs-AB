@@ -19,6 +19,12 @@ public class Mirmillon extends Personnage {
     }
 
     @Override
+    public void afficherInfosPersonnage() {
+        super.afficherInfosPersonnage();
+        System.out.println("\tClasse : Mirmillon");
+    }
+
+    @Override
     public void setNewInitiativeRandom() {
         int newIni;
         int min = 0;
@@ -31,7 +37,7 @@ public class Mirmillon extends Personnage {
         int attaque;
         int min = 0;
         int max = this.valeurMaxAttaque;
-        attaque = (int)Math.floor(Math.random() * (max - min + 1) + min);
+        attaque = (int) Math.floor(Math.random() * (max - min + 1) + min);
         return attaque;
     }
 
@@ -53,5 +59,29 @@ public class Mirmillon extends Personnage {
         System.out.println(this.nom + " attaque avec une puissance de " + forceDeFrappe);
         System.out.println(personnageCible.nom + " a une defense de " + personnageCible.valeurDefense);
         System.out.println("Les dommages sont donc de " + dommages);
+
+        if (personnageCible.pointsDeVie == 0) {
+            System.out.println("");
+            System.out.println(personnageCible.nom + " est decapite!");
+        } else {
+            System.out.println("");
+            System.out.println(this.nom + " frappe de nouveau.");
+            forceDeFrappe = this.attaqueCalcul();
+            valeurDefense = personnageCible.valeurDefense;
+            dommages = forceDeFrappe - valeurDefense;
+            if (dommages < 0) {
+                dommages = 0;
+            }
+            if (personnageCible.pointsDeVie - dommages < 0) {
+                personnageCible.pointsDeVie = 0;
+            } else {
+                personnageCible.pointsDeVie -= dommages;
+            }
+
+            System.out.println("");
+            System.out.println(this.nom + " attaque avec une puissance de " + forceDeFrappe);
+            System.out.println(personnageCible.nom + " a une defense de " + personnageCible.valeurDefense);
+            System.out.println("Les dommages sont donc de " + dommages);
+        }
     }
 }
