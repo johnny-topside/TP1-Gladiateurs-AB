@@ -41,7 +41,7 @@ public class Retiaire extends Personnage {
 
     public void retiaireGambit(Personnage personnageCible) {
         int rand;
-        
+
         if (hasNet()) {
             this.hasNet = false;
             System.out.println("");
@@ -52,8 +52,7 @@ public class Retiaire extends Personnage {
                 System.out.println("");
                 System.out.println("Son filet attrape " + personnageCible.nom + " et il l’empale sauvagement avec sa lance!");
                 personnageCible.pointsDeVie = 0;
-            }
-            else {
+            } else {
                 System.out.println("");
                 System.out.println(personnageCible.nom + " esquive le filet!");
             }
