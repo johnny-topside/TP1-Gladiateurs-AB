@@ -54,6 +54,7 @@ public class JeuGladiateurs {
             tour.augmenteTour();
             affichage.afficherSeparateurDeTour();
         }
+        affichage.afficheVictoire(Bob, Igor);
 
         // </editor-fold>
     }
