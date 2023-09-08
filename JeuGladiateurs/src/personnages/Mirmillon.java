@@ -10,6 +10,13 @@ package personnages;
  */
 public class Mirmillon extends Personnage {
 
+        // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
+    // <editor-fold defaultstate="collapsed" desc="Attributs">
+    String nomClasse = "Mirmillon";
+    // </editor-fold>
+    
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
@@ -30,7 +37,7 @@ public class Mirmillon extends Personnage {
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
-        System.out.println("\tClasse : Mirmillon");
+        System.out.println("\tClasse : " + this.nomClasse);
     }
 
     @Override
