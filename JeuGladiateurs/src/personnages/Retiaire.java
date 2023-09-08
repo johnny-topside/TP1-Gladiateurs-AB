@@ -33,7 +33,7 @@ public class Retiaire extends Personnage {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="MÃ©canique de jeu">
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public Retiaire(String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
     }
@@ -45,7 +45,7 @@ public class Retiaire extends Personnage {
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
-        System.out.println("\tClasse : Retiaire");
+        System.out.println("\tClasse : Rétiaire");
     }
 
     @Override
