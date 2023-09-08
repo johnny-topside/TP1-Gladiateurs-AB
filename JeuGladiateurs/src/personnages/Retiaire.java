@@ -50,11 +50,11 @@ public class Retiaire extends Personnage {
             rand = (int) Math.floor(Math.random() * (11));
             if (rand == 0) {
                 System.out.println("");
-                System.out.println("Son filet attrape " + personnageCible.nom + " et il l'empale sauvagement avec sa lance!");
-                personnageCible.pointsDeVie = 0;
+                System.out.println("Son filet attrape " + personnageCible.getNom() + " et il l'empale sauvagement avec sa lance!");
+                personnageCible.setPointsDeVie(0);
             } else {
                 System.out.println("");
-                System.out.println(personnageCible.nom + " l'esquive!");
+                System.out.println(personnageCible.getNom() + " l'esquive!");
             }
 
         } else {
