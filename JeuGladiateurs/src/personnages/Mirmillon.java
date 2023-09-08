@@ -26,7 +26,7 @@ public class Mirmillon extends Personnage {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="MÃ©canique de jeu">
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
@@ -48,7 +48,7 @@ public class Mirmillon extends Personnage {
 
         if (personnageCible.getPointsDeVie() == 0) {
             System.out.println("");
-            System.out.println(personnageCible.getNom() + " est decapite!");
+            System.out.println(personnageCible.getNom() + " est décapité!");
         } else {
             System.out.println("");
             System.out.println(this.nom + " frappe de nouveau!");
