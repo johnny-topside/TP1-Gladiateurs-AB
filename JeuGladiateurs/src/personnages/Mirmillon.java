@@ -40,7 +40,12 @@ public class Mirmillon extends Personnage {
         attaque = (int) Math.floor(Math.random() * (max - min + 1) + min);
         return attaque;
     }
-        
+
+    @Override
+    public void frapperPersonnage(Personnage personnageCible) {
+        mirmillionStrike(personnageCible);
+    }
+
     public void mirmillionStrike(Personnage personnageCible) {
         super.frapperPersonnage(personnageCible);
 
@@ -52,10 +57,5 @@ public class Mirmillon extends Personnage {
             System.out.println(this.nom + " frappe de nouveau.");
             super.frapperPersonnage(personnageCible);
         }
-    }
-    
-    @Override
-    public void frapperPersonnage(Personnage personnageCible) {
-            mirmillionStrike(personnageCible);
     }
 }
